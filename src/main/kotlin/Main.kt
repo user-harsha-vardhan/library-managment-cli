@@ -28,7 +28,7 @@ fun main () {
                 val title = readln()
                 println("enter author:")
                 val author = readln()
-                library.addBook(title,author)
+                library.addBook(title, author)
             }
 
             2 -> {
@@ -46,6 +46,29 @@ fun main () {
                 val author = readln()
                 library.searchByAuthor(author)
             }
+
+            5 -> {
+                println("enter book id:")
+                val id = readln().toIntOrNull() ?: -1
+                library.borrowBook(id)
+            }
+
+            6 -> {
+                println("enter book id to return:")
+                val id = readln().toIntOrNull() ?: -1
+                library.returnBook(id)
+            }
+
+            7 -> {
+                println("enter id to delete:")
+                val id = readln().toIntOrNull() ?: -1
+                library.deleteBook(id)
+            }
+
+            8 -> {
+                println(" 👋 sayonara 👋")
+
+            } else -> println("invalid choice")
         }
     }
 }
