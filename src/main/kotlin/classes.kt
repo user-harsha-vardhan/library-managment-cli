@@ -15,13 +15,13 @@ class Library {
     fun searchByTitle (title: String) {
         val found = books.filter { it.title.contains(title, ignoreCase = true) }
         if (found.isEmpty()) println("no book found by that title")
-        else books.forEach { println(it) }
+        else found.forEach { println(it) }
     }
 
     fun searchByAuthor (author: String) {
         val found  = books.filter {it.author.contains(author, ignoreCase = true)}
         if (found.isEmpty()) println("no book found by that author name")
-        else books.forEach { println(it) }
+        else found.forEach { println(it) }
     }
 
     fun borrowBook (id: Int){

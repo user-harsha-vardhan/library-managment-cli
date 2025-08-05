@@ -38,7 +38,7 @@ fun main() {
 
             3 -> {
                 println("enter book title:")
-                val title = readln()
+                val title = readln() ?: ""
                 library.searchByTitle(title)
             }
 
