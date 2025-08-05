@@ -4,7 +4,8 @@ data class Book(
     val author: String,
     var isAvailable: Boolean = true
 )
-fun main () {
+
+fun main() {
     val library = Library()
     while (true) {
         println(
@@ -67,8 +68,10 @@ fun main () {
 
             8 -> {
                 println(" 👋 sayonara 👋")
+                break
+            }
 
-            } else -> println("invalid choice")
+            else -> println("invalid choice")
         }
     }
 }
