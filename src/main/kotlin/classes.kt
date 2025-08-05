@@ -9,7 +9,9 @@ class Library {
 
     fun viewBooks () {
         if (books.isEmpty()) println("no books found")
-        else books.forEach { println(it)}
+        else books.forEachIndexed { i, book ->
+            println("$i book=${book.title}, author= ${book.author}")
+        }
     }
 
     fun searchByTitle (title: String) {
