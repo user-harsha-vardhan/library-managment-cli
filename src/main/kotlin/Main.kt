@@ -40,6 +40,12 @@ fun main () {
                 val title = readln()
                 library.searchByTitle(title)
             }
+
+            4 -> {
+                println("enter author name:")
+                val author = readln()
+                library.searchByAuthor(author)
+            }
         }
     }
 }
