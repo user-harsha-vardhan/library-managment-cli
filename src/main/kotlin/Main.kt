@@ -25,9 +25,9 @@ fun main() {
         println("\n enter your choice:")
         when (readln().toIntOrNull()) {
             1 -> {
-                println("enter title:")
+                println("enter book title:")
                 val title = readln()
-                println("enter author:")
+                println("enter book author:")
                 val author = readln()
                 library.addBook(title, author)
             }
